@@ -233,7 +233,8 @@ public class SynchronizedQueue {
             Thread.sleep(100);
 
             // TODO - you fill in here to interrupt the threads.
-
+            System.out.println("Hello world");
+            
             // TODO - you fill in here to wait for the threads to
             // exit.
             
