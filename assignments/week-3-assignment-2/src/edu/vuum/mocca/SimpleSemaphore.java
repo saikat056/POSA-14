@@ -70,12 +70,9 @@ public class SimpleSemaphore {
     	lock.lock();
     	try{
     		while(availPermits == 0)
-    			notZero.await();
+    			notZero.awaitUninterruptibly();
     		--availPermits;
-    	} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}finally{
+    	}finally{
     		lock.unlock();
     	}
     }
